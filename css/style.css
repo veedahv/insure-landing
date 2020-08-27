@@ -1,0 +1,313 @@
+:root {
+    --color-white: #fff;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* nav{
+    display: flex;
+} */
+
+/* .hamburger{
+    display: flex;
+    justify-self: right;
+} */
+
+.close{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.navLinks{
+    background: hsl(256, 26%, 20%) url(../images/bg-pattern-mobile-nav.svg) bottom no-repeat;
+    width: 100vw;
+    height: 80vh;
+    display: none;
+}
+
+.navLinks a{
+    color: var(--color-white);
+}
+
+.topImage img{
+    width: 100vw;
+    height: 430px;
+}
+
+.insureHead{
+    background-color: hsl(256, 26%, 20%);
+    padding: 50px 20px;
+    width: 100vw;
+    height: 500px;
+    background-image: url(../images/bg-pattern-intro-left-mobile.svg), url(../images/bg-pattern-intro-right-mobile.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.insureHead h1{
+    color: var(--color-white);
+    text-align: center;
+    font-weight: 900;
+    font-size: 37.1px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.insureHead p{
+    color: hsl(216, 30%, 68%);
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+.insureHead a{
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 6px;
+}
+
+.different{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.about p{
+    color: hsl(216, 30%, 68%);
+    padding: 30px 20px;
+    line-height: 20px;
+}
+
+.about h3{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+section hr{
+    margin: 70px auto 20px auto;
+    width: 100px;
+    height: 2px;
+    background-color: hsl(216, 30%, 68%);
+}
+
+.findOut{
+    margin: auto;
+    padding: 30px;
+    width: 90vw;
+    height: 300px;
+    background: hsl(256, 26%, 20%) url(../images/bg-pattern-how-we-work-mobile.svg) right no-repeat;
+}
+
+.findOut h2{
+    color: var(--color-white);
+    margin-bottom: 30px;
+    font-size: 37px;
+}
+
+.findOut a{    
+    color: var(--color-white);
+    border: 2px solid white;
+    padding: 10px;
+}
+
+footer{
+    background-image: url(../images/bg-pattern-footer-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: hsl(0, 0%, 98%);
+    padding: 80px 20px;
+}
+
+.mediaIcons{
+    margin-bottom: 20px;
+}
+
+footer header{
+    font-weight: bold;
+    margin: 30px auto;
+}
+
+footer li{
+    margin: 10px auto;
+}
+
+@media only screen and (min-width: 1044px){
+    body{
+        text-align: left;
+    }
+    
+    nav{
+        display: flex;
+        width: 100vw;
+    }
+    
+    .hamburger{
+        display: none;
+    }
+    
+    .navLinks{
+        background-color:var(--color-white);
+        background-image: none;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navLinks ul{
+        display: flex;
+    }
+    
+    .navLinks a{
+        color: hsl(216, 30%, 68%);
+    }
+    
+    .topImage{
+        width: 500px;
+        height: 750px;
+        position: absolute;
+        z-index: 5;
+        margin-top: 50px;
+        margin-left: 700px;
+        background: url(../images/image-intro-desktop.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .top{
+        background-color: var(--color-white);
+        width: 100vw;
+        height: 800px;
+        position: relative;
+        z-index: 5;
+        background-image: url(../images/bg-pattern-intro-left-desktop.svg), url(../images/bg-pattern-intro-right-desktop.svg);
+        background-blend-mode: darken;
+        background-position: left bottom, right top;
+        background-repeat: no-repeat no-repeat;
+    }
+
+    .insure{
+        opacity: 0.9;
+        background-color: hsl(256, 26%, 20%);
+        background-blend-mode: soft-light;
+        background-image: none;
+        position: relative;
+        z-index: -5;
+        width: 100vw;
+        height: 450px;
+    }
+    
+    .insureHead{
+        padding: 50px 20px;
+        width: 45vw;
+        height: 350px;
+        position: absolute;
+        background-image: none;
+    }
+
+    .mobileImage{
+        display: none;
+    }
+    
+    .insureHead h1{
+        color: var(--color-white);
+        text-align: left;
+        font-weight: 900;
+        font-size: 37.1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .insureHead p{
+        color: hsl(216, 30%, 68%);
+        margin-bottom: 40px;
+        line-height: 30px;
+    }
+    
+    .insureHead a{
+        color: var(--color-white);
+        border: 2px solid white;
+        padding: 6px;
+    }
+
+    #aboutUs{
+        display: flex;
+        padding: 120px;
+        justify-content: space-between;
+    }
+    
+    .different{
+        padding-left: 120px;
+    }
+    
+    .about p{
+        padding: 30px 20px;
+        line-height: 20px;
+    }
+    
+    .about h3{
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    
+    section hr{
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 120px;
+        width: 100px;
+        height: 2px;
+    }
+    
+    .findOut{
+        display: flex;
+        width: 90vw;
+        height: 200px;
+        background: hsl(256, 26%, 20%) url(../images/bg-pattern-how-we-work-desktop.svg) right no-repeat;
+    }
+    
+    .findOut h2{
+        color: var(--color-white);
+        margin-bottom: 30px;
+        font-size: 37px;
+    }
+    
+    .findOut a{    
+        color: var(--color-white);
+        border: 1px solid white;
+        padding: 10px;
+    }
+    
+    footer{
+        background: hsl(0, 0%, 98%) url(../images/bg-pattern-footer-desktop.svg) top left no-repeat;
+        padding: 120px 20px;
+    }
+
+    .footerHead{
+        display: flex;
+    }
+
+    footer hr{
+        margin: 10px 120px;
+    }
+
+    .wrap{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
