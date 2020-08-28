@@ -2,8 +2,6 @@
     --color-white: #fff;
 }
 
-
-
 *{
     margin: 0;
     padding: 0;
@@ -12,20 +10,32 @@
 
 body{
     text-align: center;
+    font-family: 'Karla', sans-serif;
 }
 
 a{
     text-decoration: none;
 }
-
-/* nav{
+nav, .findOut h2, .insureHead h1{
+    font-family: 'DM Serif Display', serif;
+}
+nav{
+    width: 100vw;
     display: flex;
-} */
+    /* justify-content: space-between; */
+    padding: 10px 30px;
+}
 
-/* .hamburger{
+nav header{
     display: flex;
-    justify-self: right;
-} */
+    justify-content: flex-start;
+}
+
+.hamburger{
+    display: flex;
+    padding-left: 10rem;
+    /* justify-content: flex-end; */
+}
 
 .close{
     display: none;
@@ -42,13 +52,28 @@ ul{
     display: none;
 }
 
-.navLinks a{
-    color: var(--color-white);
+.navLink{
+    display: none;
 }
 
-.topImage img{
+.navLinks a{
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.top{
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.topImage{
     width: 100vw;
     height: 430px;
+    background-image: url(../images/image-intro-mobile.jpg);
+}
+
+.bgRight, .bgLeft{
+    display: none;
 }
 
 .insureHead{
@@ -56,9 +81,10 @@ ul{
     padding: 50px 20px;
     width: 100vw;
     height: 500px;
-    background-image: url(../images/bg-pattern-intro-left-mobile.svg), url(../images/bg-pattern-intro-right-mobile.svg);
+    position: relative;
+    /* background-image: url(../images/bg-pattern-intro-left-mobile.svg), url(../images/bg-pattern-intro-right-mobile.svg);
     background-position: left top, right bottom;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat, no-repeat; */
 }
 
 .insureHead h1{
@@ -68,6 +94,22 @@ ul{
     font-size: 37.1px;
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+.bgMobileRight{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.bgMobileLeft{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
 }
 
 .insureHead p{
@@ -100,11 +142,16 @@ ul{
     margin-top: 20px;
 }
 
-section hr{
-    margin: 70px auto 20px auto;
+.top hr{
+    display: none;
+}
+   
+.aboutSec hr{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto 60px auto;
     width: 100px;
     height: 2px;
-    background-color: hsl(216, 30%, 68%);
 }
 
 .findOut{
@@ -118,13 +165,14 @@ section hr{
 .findOut h2{
     color: var(--color-white);
     margin-bottom: 30px;
-    font-size: 37px;
+    font-weight: 400;
 }
 
-.findOut a{    
+.findOut button{    
     color: var(--color-white);
     border: 2px solid white;
     padding: 10px;
+    background-color: transparent;
 }
 
 footer{
@@ -133,10 +181,12 @@ footer{
     background-position: top;
     background-color: hsl(0, 0%, 98%);
     padding: 80px 20px;
+    text-transform: uppercase;
 }
 
 .mediaIcons{
     margin-bottom: 20px;
+    padding-right: 12px;
 }
 
 footer header{
@@ -155,14 +205,17 @@ footer li{
     
     nav{
         display: flex;
+        justify-content: space-between;
+        align-content: center;
         width: 100vw;
+        padding: 20px 150px;
     }
     
     .hamburger{
         display: none;
     }
     
-    .navLinks{
+    .navLink{
         background-color:var(--color-white);
         background-image: none;
         height: 50px;
@@ -170,23 +223,39 @@ footer li{
         justify-content: flex-end;
     }
 
-    .navLinks ul{
+    .navLink ul{
         display: flex;
+        text-transform: uppercase;
+        font-weight: 400;
     }
     
-    .navLinks a{
-        color: hsl(216, 30%, 68%);
+    .navLink a{
+        color: hsl(273, 4%, 51%);
+        padding-right: 20px;
+    }
+
+    .navLink .btn{
+        border: 1px solid #000000;
+        background-color: var(--color-white);
+        color: #000000;
+        padding: 5px 12px;
+        text-transform: uppercase;
+    }
+
+    .navLinks{
+        display: none;
     }
     
     .topImage{
         width: 500px;
         height: 750px;
         position: absolute;
-        z-index: 5;
+        z-index: 1;
         margin-top: 50px;
         margin-left: 700px;
         background: url(../images/image-intro-desktop.jpg) no-repeat;
-        background-size: cover;
+        background-size: contain;
+        overflow: hidden;
     }
 
     .top{
@@ -194,34 +263,54 @@ footer li{
         width: 100vw;
         height: 800px;
         position: relative;
+    }
+
+    .bgRight{
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
         z-index: 5;
-        background-image: url(../images/bg-pattern-intro-left-desktop.svg), url(../images/bg-pattern-intro-right-desktop.svg);
-        background-blend-mode: darken;
-        background-position: left bottom, right top;
-        background-repeat: no-repeat no-repeat;
+    }
+
+    .bgLeft{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+    }
+    
+    .top hr{
+        width: 100px;
+        height: 2px;
+        background-color: hsl(216, 30%, 68%);
+        display: flex;
+        justify-content: flex-start;
     }
 
     .insure{
-        opacity: 0.9;
         background-color: hsl(256, 26%, 20%);
         background-blend-mode: soft-light;
         background-image: none;
         position: relative;
-        z-index: -5;
         width: 100vw;
         height: 450px;
     }
+
+    .insureHead hr{
+        width: 100px;
+        height: 2px;
+        background-color: hsl(216, 30%, 68%);
+        justify-content: flex-start;
+    }
     
     .insureHead{
-        padding: 50px 20px;
-        width: 45vw;
+        padding: 50px 100px;
+        width: 50vw;
         height: 350px;
         position: absolute;
         background-image: none;
-    }
-
-    .mobileImage{
-        display: none;
     }
     
     .insureHead h1{
@@ -245,9 +334,13 @@ footer li{
         padding: 6px;
     }
 
+    .bgMobileRight, .bgMobileLeft{
+        display: none;
+    }
+
     #aboutUs{
         display: flex;
-        padding: 120px;
+        padding: 40px 120px;
         justify-content: space-between;
     }
     
@@ -256,26 +349,31 @@ footer li{
     }
     
     .about p{
-        padding: 30px 20px;
+        padding: 30px 0px;
         line-height: 20px;
+        width: 350px;
     }
     
     .about h3{
-        font-weight: bold;
-        font-size: 20px;
-        margin-top: 20px;
+        font-weight: 700;
+        font-size: 25px;
+        margin-top: 30px;
     }
     
-    section hr{
+    .aboutSec hr{
         display: flex;
         justify-content: flex-start;
-        padding-left: 120px;
+        margin: 0px;
+        margin-left: 120px;
+        margin-bottom: 60px;
         width: 100px;
         height: 2px;
     }
     
     .findOut{
         display: flex;
+        justify-content: space-between;
+        padding: 40px 120px;
         width: 90vw;
         height: 200px;
         background: hsl(256, 26%, 20%) url(../images/bg-pattern-how-we-work-desktop.svg) right no-repeat;
@@ -285,12 +383,18 @@ footer li{
         color: var(--color-white);
         margin-bottom: 30px;
         font-size: 37px;
+        width: 330px;
     }
     
-    .findOut a{    
+    .findOut button{ 
+        height: 33px;   
         color: var(--color-white);
         border: 1px solid white;
+        background-color: transparent;
         padding: 10px;
+        display: flex;
+        margin: auto 0px;
+        justify-content: flex-end;
     }
     
     footer{
@@ -300,6 +404,18 @@ footer li{
 
     .footerHead{
         display: flex;
+        justify-content: space-between;
+        padding: 10px 250px;
+    }
+
+    .footerHead header{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    footer header{
+        font-weight: bold;
+        margin: 0px;
     }
 
     footer hr{
@@ -309,5 +425,6 @@ footer li{
     .wrap{
         display: flex;
         justify-content: space-evenly;
+        margin-top: 50px;
     }
 }
